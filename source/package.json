@@ -1,7 +1,7 @@
 {
-  "name": "Cheezentration",
+  "name": "CJSTemplate",
   "version": "0.0.0",
-  "description": "Cheezentration",
+  "description": "CJSTemplate",
   "main": "app.js",
   "author": {
     "name": "Jeff",

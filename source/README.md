@@ -1,3 +1,4 @@
-﻿# Cheezentration
+﻿# CreateJS Template App 
+
 
 
