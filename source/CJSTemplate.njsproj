@@ -30,7 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="public\javascripts\cheezent.js" />
+    <Compile Include="public\javascripts\CheezTemp.js" />
     <Compile Include="routes\index.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
