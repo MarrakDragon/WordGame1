@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+
+    canvas(id="mainwindow" width="250" height="400")
+
+    script(src="http://code.createjs.com/createjs-2013.12.12.min.js")
+    script(src="javascripts/cheezent.js")

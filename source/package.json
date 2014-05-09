@@ -1,0 +1,15 @@
+{
+  "name": "Cheezentration",
+  "version": "0.0.0",
+  "description": "Cheezentration",
+  "main": "app.js",
+  "author": {
+    "name": "Jeff",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
