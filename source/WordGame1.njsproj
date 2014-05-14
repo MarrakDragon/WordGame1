@@ -31,11 +31,13 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="public\javascripts\CheezTemp.js" />
+    <Compile Include="routes\check.js" />
     <Compile Include="routes\index.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.html" />
     <Content Include="README.md" />
+    <Content Include="views\check.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
   </ItemGroup>

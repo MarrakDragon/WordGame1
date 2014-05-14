@@ -1,11 +1,11 @@
 {
-  "name": "CJSTemplate",
+  "name": "WordGame",
   "version": "0.0.0",
-  "description": "CJSTemplate",
+  "description": "WordGame",
   "main": "app.js",
   "author": {
-    "name": "Jeff",
-    "email": ""
+    "name": "Jeff Brown
+    "email": "jeff@cheezburger.com"
   },
   "dependencies": {
     "express": "3.4.4",
