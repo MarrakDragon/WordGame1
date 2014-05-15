@@ -5,7 +5,9 @@
 
 var express = require('express');
 var routes = require('./routes');
-var check = require('./routes/check');
+var gaddag = require('gaddag');
+var dictionary = gaddag();
+var check = require('./routes/check')(dictionary);
 var http = require('http');
 var path = require('path');
 
@@ -23,6 +25,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+dictionary.load('public\\dictionaries\\enable1.txt');
 
 // development only
 if ('development' == app.get('env')) {
