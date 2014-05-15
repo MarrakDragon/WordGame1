@@ -34,6 +34,9 @@
     <Compile Include="routes\check.js" />
     <Compile Include="routes\index.js" />
     <Content Include="package.json" />
+    <Content Include="public\dictionaries\enable1.txt" />
+    <Content Include="public\dictionaries\sowpods.txt" />
+    <Content Include="public\dictionaries\TWL06.txt" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.html" />
     <Content Include="README.md" />
@@ -43,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
+    <Folder Include="public\Dictionaries\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
     <Folder Include="public\stylesheets\" />

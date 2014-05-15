@@ -9,10 +9,7 @@ exports.isValid = function (req, res) {
     res.render('check', { title: 'Check a word' });
 };
 
-JLB support  getWords to get a list of words given some letters
 exports.getWords = function (req, res) {
     var from = req.params[0];
-    console.log('Param to isvalid ' + req.query[0]);
-    res.render('check', { title: 'Check a word' });
+    res.render('getWords', { title: 'Given letters, get words' });
 };
-getWords
