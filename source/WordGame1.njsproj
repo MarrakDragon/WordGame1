@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="private\gaddag.js" />
     <Compile Include="public\javascripts\CheezTemp.js" />
     <Compile Include="routes\check.js" />
     <Compile Include="routes\index.js" />
@@ -45,6 +46,7 @@
     <Content Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="private\" />
     <Folder Include="public\" />
     <Folder Include="public\Dictionaries\" />
     <Folder Include="public\images\" />

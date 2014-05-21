@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var gaddag = require('gaddag');
+var gaddag = require('./private/gaddag.js');
 var dictionary = gaddag();
 var check = require('./routes/check')(dictionary);
 var http = require('http');
@@ -25,7 +25,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-dictionary.load('public\\dictionaries\\enable1.txt');
+dictionary.loadDictionary('public\\dictionaries\\enable1.txt');
 
 // development only
 if ('development' == app.get('env')) {
@@ -33,8 +33,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/check/:isWordValid', check.isValid);
-app.get('/check/:getWords', check.getWords);
+app.get('/check/isWordValid', check.isValid);
+app.get('/check/getWords', check.getWords);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

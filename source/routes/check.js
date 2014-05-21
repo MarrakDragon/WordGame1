@@ -15,8 +15,16 @@ module.exports = function (dictionary) {
         },
 
         getWords: function (req, res) {
-            var from = req.params[0];
-            res.render('getWords', { title: 'Given letters, get words' });
+            var letters = req.query.letters;
+            var size = req.query.size;
+            dictionary.createBoard(3);
+            var wordsFound = dictionary.findWords(letters, size);
+            res.render('check', {
+                title: 'Results',
+                letters: letters,
+                size: size,
+                words: wordsFound,
+            });
         }
     };
 };
