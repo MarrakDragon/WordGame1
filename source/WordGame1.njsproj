@@ -42,6 +42,7 @@
     <Content Include="README.html" />
     <Content Include="README.md" />
     <Content Include="views\check.jade" />
+    <Content Include="views\getwords.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
   </ItemGroup>
