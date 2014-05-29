@@ -174,18 +174,18 @@ module.exports = function () {
                 }
             }
 
-            console.log(charStack);
+            //console.log(charStack);
             if (node.$) {
                 var s = "";
                 for (var i = 0; i < charStack.length; i++) {
                     s = s + charStack[i];
                 }
                 words.push(s);
-                console.log(words);
+                //console.log(words);
             }
 
             visited[row][column] = false;
-            console.log(visited);
+            //console.log(visited);
             charStack.pop();
         };
 
