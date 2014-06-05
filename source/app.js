@@ -31,7 +31,12 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(allowCrossDomain);
+    // development only
+if ('development' === app.get('env')) {
+    console.log(" Dev Environment, enabling CORS ");
+    app.use(allowCrossDomain);
+}
+
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
