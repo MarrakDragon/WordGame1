@@ -13,6 +13,15 @@ var path = require('path');
 
 var app = express();
 
+    //CORS middleware
+var allowCrossDomain = function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+}
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -22,10 +31,11 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(allowCrossDomain);
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-dictionary.loadDictionary('public\\dictionaries\\enable1.txt');
+//dictionary.loadDictionary('public\\dictionaries\\enable1.txt');
 
 // development only
 if ('development' === app.get('env')) {

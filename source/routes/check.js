@@ -4,11 +4,16 @@
  */
 
 module.exports = function (dictionary) {
+
     return {
         isValid: function (req, res) {
-            console.log('Param to isvalid ' + req.query.word);
             var valid = dictionary.find(req.query.word);
-            res.json({ isValid: valid });
+            res.writeHead(200, { "Access-Control-Allow-Origin": "*" });
+            var body = JSON.stringify({ isValid: valid });
+            res.write(body);
+            res.end();
+            //console.log('sent result' + valid);
+            //res.json({ isValid: valid });
         },
 
         getWords: function (req, res) {
@@ -17,6 +22,7 @@ module.exports = function (dictionary) {
             dictionary.createBoard(3);
             var wordsFound = dictionary.findWords(letters, size);
             res.json({ found: wordsFound });
+            console.log(res);
 
         }
     };
